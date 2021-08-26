@@ -1,0 +1,458 @@
+/* Reset CSS */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html{
+    font-family: Arial, Helvetica, sans-serif;
+    scroll-behavior: smooth;
+}
+/*Common*/
+.text-white{
+    color: #fff !important;
+}
+
+.text-center{
+    text-align: center !important;
+}
+
+.pull-right{
+    float: right !important;
+}
+
+.btn{
+    background-color: #000;
+    color: #fff;
+    padding: 8px 16px;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    -webkit-appearance: none ;
+}
+
+.btn:hover{
+    background-color: #ccc;
+    color: #000;
+}
+
+.row{
+    overflow: hidden;
+    margin-left: -8px;
+    margin-right: -8px;
+}
+
+.col{
+    float: left;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+.col-haft{
+    width: 50%;
+}
+
+.col-third{
+    width: 33.33333%;
+}
+
+.col-full{
+    width: 100%;
+}
+
+.mt-48{
+    margin-top: 48px;
+}
+
+.mt-8{
+    margin-top: 8px;
+}
+
+.mt-16{
+    margin-top: 16px;
+}
+
+
+/*Begin Header*/
+#header {
+    background: #000;
+    color: #fff;
+    height: 46px;  
+    position: fixed;
+    top: 0;
+    left:0;
+    right: 0;
+    text-transform: uppercase;
+    z-index: 1;
+}
+
+#nav{
+    display: inline-block;
+}
+
+#nav li{
+    display: inline-block;
+    position: relative;
+}
+.subnav li:hover a,
+#nav > li:hover > a{
+    background: #ccc;
+    color: #000;
+}
+
+#nav > li:hover > .subnav{
+    display: block;
+}
+#nav > li > a{
+    color: #fff;
+    display: block;
+}
+#nav li  a{
+    text-decoration: none;
+    line-height: 46px;
+    padding: 0px 24px ;
+}
+
+#nav .subnav{
+   display: none;
+   position: absolute;
+   background: #fff;
+   box-shadow: 0 0 10px rgba(0,0,0, 0.3);
+}
+#nav .subnav a{
+    color: #000;
+    display: block;
+    padding: 0 12px;
+}
+.subnav li{
+    min-width: 140px ;
+}
+#header .mobile-menu-button{
+    display: none;
+    float: right;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+#header .mobile-menu-button:active{
+    background-color: #ccc;
+}
+
+#header .search-button{
+    float: right;  
+}
+#header .search-button:hover{
+background: #f44336;
+cursor: pointer;
+}
+#header .mobile-menu-icon,
+#header .search-icon{
+    color: #fff;
+    font-size: 20px;
+    line-height: 46px;
+    padding: 0 21px;
+}
+
+.nav-icon{
+    font-size: 12px;
+}
+/*Begin Slider*/
+#slider {
+    margin-top: 46px;
+    background: url('../img/sliders/slider1.jpg') top center / cover no-repeat;
+    padding-top: 50%;
+    position: relative;
+}
+
+#slider .slider-content{
+    position: absolute;
+    bottom: 47px;
+    color: #fff;
+    text-align: center;
+    width: 100%;
+
+}
+
+#slider .header-content{
+    font-weight: 300;
+    margin-bottom: 15px;
+    font-size: 24px;
+}
+
+#slider .decreption-content{
+    font-weight: bolder;
+}
+
+/*Begin Content*/
+
+#content .section-content{
+    width: 800px;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 112px;
+    padding-right: 16px;
+    padding-left: 16px;
+}
+
+#content .heading-section{
+    text-align: center;
+    font-size: 30px;
+    font-weight: 300;
+    letter-spacing: 4px;
+    padding-top: 74px;
+}
+
+#content .sub-heading-section{
+    text-align: center;
+    margin-top: 20px;
+    font-size: 15px;
+    font-style: italic;
+    opacity: 0.6;
+}
+/*About*/
+#content .about-content{
+    margin-top: 20px;
+    text-align: justify;
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+#content .member-list{
+    margin-top: 32px;
+}
+
+
+#content .member-name{
+    margin: 15px 0;
+    font-size: 15px;
+}
+
+#content .member-img{
+    width: 154px;
+    border-radius: 10px;
+}
+/*Tour*/
+.tour-section{
+    background-color: #000;
+}
+
+.ticket-list{
+    background-color: #fff;
+    color: #757575;
+    width: 100%;
+    height: 120px;
+    margin: 40px auto 0 auto;
+    list-style: none;
+    margin-bottom: 16px;
+}
+
+.ticket-list li{
+    height: 40px;
+    line-height: 40px;
+    border-bottom: 1px solid #ddd;
+    font-size: 15px;
+    padding: 0 16px;
+}
+
+.ticket-list .sold-out{
+    background-color: #f44336;
+    color: #fff;
+    padding: 4px 8px;
+    margin-left: 16px;
+}
+
+.ticket-list .quantity{
+    float: right;
+    background-color: #000;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    color: #fff;
+    text-align: center;
+    line-height: 24px;
+    margin-top: 8px;
+}
+
+
+.tour-section .place-img{
+    width: 100%;
+    display: block;
+    
+}
+
+.tour-section .place-img:hover{
+    opacity: 0.6;
+}
+
+.tour-section .palace-body{
+    background-color: #fff;
+    color: #000;
+    padding: 16px;
+    font-size: 15px;
+}
+
+.tour-section .place-heading{
+    font-size: 15px;
+    margin-bottom: 15px;
+}
+
+.tour-section .place-time{
+    margin-bottom: 15px;
+    opacity: 0.6;
+}
+
+.tour-section .place-desc{
+    margin-bottom: 15px;
+    line-height: 1.5;
+}
+
+/*Contact*/
+.contact-info{
+    font-size: 18px;
+}
+
+.contact-info i[class*=ti-]{
+    padding: 16px 16px 16px 0;
+    line-height: 1.5;
+}
+
+.contact-form .form-control{
+    width: 100%;
+    border: 1px solid #ccc;
+    font-size: 15px;
+    padding: 11px 8px;
+}
+/*Map-section*/
+.map-img{
+    width: 100%;
+    display: block;
+}
+/*Footer*/
+#footer {
+    padding: 64px 16px;
+    text-align: center;
+    background-color: #f1f1f1;
+}
+
+#footer .social-list{
+    font-size: 24px;
+}
+#footer .social-list a{
+    color: rgba(0,0,0, 0.6);
+    text-decoration: none;
+}
+#footer .social-list a:hover{
+    color: rgba(0,0,0, 0.3);
+}
+.copyright,
+.copyright a{
+    font-size: 15px;
+    margin: 15px 0;
+    color: rgba(0,0,0, 0.4);
+    line-height: 1.5;
+}
+
+/* modal */
+.modal{
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0, 0.4);
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+.modal-container{
+    position: relative;
+    width: 900px;
+    max-width: calc(100% - 32px);
+    min-height: 200px;
+    background-color: #fff;
+    z-index: 10;
+    animation: fadeIn ease 0.5s;
+}
+.modal-close{
+    position: absolute;
+    right: 16px;
+    top: 16px;
+    color: #fff;
+    cursor: pointer;
+}
+.modal-close:hover{
+    opacity: 0.8;
+}
+.modal-header{
+    background-color: #009688;
+    height: 80px;
+    color: #fff;
+    font-size: 25px;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+.modal-header i {
+    margin-right: 10px;
+}
+.modal-body{
+    padding: 0 16px 16px;
+}
+.modal-lable{
+    display: block;
+    margin-bottom: 8px;
+    margin-top: 16px;
+    font-size: 15px;
+    color: black;
+    font-weight: bold;
+}
+.modal-input{
+    font-size: 15px;
+    padding: 10px;
+    width: 100%;
+}
+.modal-btn{
+    margin: 12px 0 12px 0;
+    height: 40px;
+    width: 100%;
+    background-color: #009688;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+    cursor: pointer;
+}
+.modal-btn i{
+    margin-left: 8px;
+}
+.modal-btn:hover{
+    background-color: rgb(194, 188, 188);
+}
+.modal-footer{
+    text-align: right;
+    padding-bottom: 24px;
+    padding-right: 16px;
+}
+.modal-footer a{
+    color: rgb(11, 179, 179);
+}
+
+.modal.open{
+    display: flex;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-140px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
