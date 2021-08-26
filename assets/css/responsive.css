@@ -14,7 +14,7 @@
     .s-col-full{
         width: 100%;
     }
-
+    
     .s-mt-8{
         margin-top: 8px;
     }
@@ -60,11 +60,16 @@
     #content .member-img{
         width: 60%;
     }
-    
+    #content .member-list{
+        margin-top: 0;
+    }
     .btn{
         width: 100%;
         font-size: 15px;
         padding: 15px 16px;
+    }
+    .pd-l-20 {
+        padding-left: 0;
     }
 }  
 

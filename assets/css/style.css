@@ -4,9 +4,24 @@
     margin: 0;
     box-sizing: border-box;
 }
+:root {
+    --primary-color: #0bc7b6;
+}
 html{
     font-family: Arial, Helvetica, sans-serif;
     scroll-behavior: smooth;
+}
+body{
+    background: black;
+}
+#content{
+    background-color: #fff;
+}
+#band{
+    background-image: url("../img/background/bgrbigbang.jpeg");
+    background-attachment: fixed;
+    color: #fff;
+    text-shadow: -1px 1px #000;
 }
 /*Common*/
 .text-white{
@@ -34,7 +49,7 @@ html{
 }
 
 .btn:hover{
-    background-color: #ccc;
+    background-color: #09f5df;
     color: #000;
 }
 
@@ -73,11 +88,18 @@ html{
 .mt-16{
     margin-top: 16px;
 }
-
-
+.mr-58{
+    margin-right: 58px;
+}
+.pd-l-20{
+    padding-left: 20%;
+}
+.has-br-10{
+    border-radius: 10px;
+}
 /*Begin Header*/
 #header {
-    background: #000;
+    background: #00000075;
     color: #fff;
     height: 46px;  
     position: fixed;
@@ -98,7 +120,7 @@ html{
 }
 .subnav li:hover a,
 #nav > li:hover > a{
-    background: #ccc;
+    background: #09f5df;
     color: #000;
 }
 
@@ -127,7 +149,7 @@ html{
     padding: 0 12px;
 }
 .subnav li{
-    min-width: 140px ;
+    min-width: 143px ;
 }
 #header .mobile-menu-button{
     display: none;
@@ -162,18 +184,38 @@ cursor: pointer;
 /*Begin Slider*/
 #slider {
     margin-top: 46px;
-    background: url('../img/sliders/slider1.jpg') top center / cover no-repeat;
-    padding-top: 50%;
-    position: relative;
 }
-
+.slider-item{
+    height: 760px;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+@keyframes fadeIn {
+    from {
+        transform: scale(0);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+.sl-3{
+    background-image: url("../img/sliders/inHongkong.jpg");
+}
+.sl-1{
+    background-image: url("../img/sliders/inMalaisia.jpg");
+}
+.sl-2{
+    background-image: url("../img/sliders/inPhilipine.jpg");
+}
+.slider-wrap{
+    margin-bottom: 16px;
+}
 #slider .slider-content{
-    position: absolute;
-    bottom: 47px;
     color: #fff;
     text-align: center;
     width: 100%;
-
 }
 
 #slider .header-content{
@@ -219,6 +261,8 @@ cursor: pointer;
     text-align: justify;
     font-size: 15px;
     line-height: 1.5;
+    background-color: #00000075;
+    padding: 6px;
 }
 
 #content .member-list{
@@ -228,50 +272,59 @@ cursor: pointer;
 
 #content .member-name{
     margin: 15px 0;
-    font-size: 15px;
+    font-size: 20px;
+    font-weight: 600;
+    text-shadow: 0px 0px 20px #09f5df;
 }
 
 #content .member-img{
     width: 154px;
     border-radius: 10px;
+    min-height: 230px;
+    box-shadow: 4px 0px 14px #09f5df;
 }
 /*Tour*/
 .tour-section{
     background-color: #000;
+    color: #fff;
 }
 
 .ticket-list{
-    background-color: #fff;
-    color: #757575;
+    color: #fff;
     width: 100%;
     height: 120px;
     margin: 40px auto 0 auto;
     list-style: none;
     margin-bottom: 16px;
+    border-radius: 10px;
+    border: 1px solid #09f5df;
 }
 
 .ticket-list li{
     height: 40px;
     line-height: 40px;
-    border-bottom: 1px solid #ddd;
+    border-bottom: 1px solid #09f5df63;
     font-size: 15px;
     padding: 0 16px;
 }
-
+.ticket-list li:last-child{
+    border-bottom: unset;
+}
 .ticket-list .sold-out{
     background-color: #f44336;
     color: #fff;
     padding: 4px 8px;
     margin-left: 16px;
+    border-radius: 10px;
 }
 
 .ticket-list .quantity{
     float: right;
-    background-color: #000;
+    background-color: #fff;
     width: 24px;
     height: 24px;
     border-radius: 50%;
-    color: #fff;
+    color: #000;
     text-align: center;
     line-height: 24px;
     margin-top: 8px;
@@ -281,7 +334,8 @@ cursor: pointer;
 .tour-section .place-img{
     width: 100%;
     display: block;
-    
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
 }
 
 .tour-section .place-img:hover{
@@ -293,6 +347,8 @@ cursor: pointer;
     color: #000;
     padding: 16px;
     font-size: 15px;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
 }
 
 .tour-section .place-heading{
@@ -322,9 +378,12 @@ cursor: pointer;
 
 .contact-form .form-control{
     width: 100%;
-    border: 1px solid #ccc;
+    border: 1px solid #000;
     font-size: 15px;
     padding: 11px 8px;
+}
+.contact-info p a{
+    color: darkcyan;
 }
 /*Map-section*/
 .map-img{
@@ -388,7 +447,7 @@ cursor: pointer;
     opacity: 0.8;
 }
 .modal-header{
-    background-color: #009688;
+    background-color: #09f5df;
     height: 80px;
     color: #fff;
     font-size: 25px;
@@ -419,7 +478,7 @@ cursor: pointer;
     margin: 12px 0 12px 0;
     height: 40px;
     width: 100%;
-    background-color: #009688;
+    background-color: #09f5df;
     color: #fff;
     display: flex;
     justify-content: center;
