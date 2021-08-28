@@ -8,7 +8,7 @@
     <link rel="icon" href="http://2.bp.blogspot.com/-lXwwn4Jkc1c/VRAPmHuLg1I/AAAAAAAAAoo/UxGcc_79--c/s1600/shuttle-music-player_icon.png" type="image/x-icon" />
     <link rel="stylesheet" href="./assets/css/style.css">
     <link rel="stylesheet" href="./assets/css/responsive.css">
-    <link rel="stylesheet" href="/w3_band/assets/fonts/themify-icons-font/themify-icons.css">
+    <link rel="stylesheet" href="./assets/fonts/themify-icons-font/themify-icons.css">
 </head>
 <body>
     <div id="main">
@@ -71,33 +71,32 @@
             <div id="band">
                 <div class="section-content">
                     <h2 class="heading-section">BIG BANG</h2>
-                <p class="sub-heading-section">We love music</p>
-                <p class="about-content">We have created a fictional band website. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    <p class="sub-heading-section">We love music</p>
+                    <p class="about-content">
+                    We have created a fictional band website. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                </div>
                 <div class="row member-list">
-                    <div class="col col-third s-col-full mt-16 text-center">
+                    <div class="col col-2-4 s-col-full mt-16 text-center">
                         <p class="member-name">TOP</p>
                         <img src="./assets/img/team/top.jpg" alt="name" class="member-img">
                     </div>
-                    <div class="col col-third s-col-full mt-16 text-center">
+                    <div class="col col-2-4 s-col-full mt-16 text-center">
                         <p class="member-name">Teayang</p>
                         <img src="./assets/img/team/ty.jpg" alt="name" class="member-img">
                     </div>
-                    <div class="col col-third s-col-full mt-16 text-center">
+                    <div class="col col-2-4 s-col-full mt-16 text-center">
                         <p class="member-name">G-Dragon</p>
                         <img src="./assets/img/team/gd.jpg" alt="name" class="member-img">
                     </div>
-                </div>
-                <div class="row member-list pd-l-20">
-                    <div class="col col-third s-col-full mt-16 mr-58 text-center">
+                    <div class="col col-2-4 s-col-full mt-16 text-center">
                         <p class="member-name">Deasung</p>
                         <img src="./assets/img/team/ts.jpg" alt="name" class="member-img">
                     </div>
-                    <div class="col col-third s-col-full mt-16 text-center">
+                    <div class="col col-2-4 s-col-full mt-16 text-center">
                         <p class="member-name">Seungri</p>
                         <img src="./assets/img/team/sr.jpg" alt="name" class="member-img">
                     </div>
-                </div>  
-                </div>
+                </div> 
             </div>
             <!--Tour */-->
             <div id="tour" class="tour-section">
@@ -116,7 +115,7 @@
                             <img src="./assets/img/sliders/newyork.jpg" alt="hình ảnh" class="place-img">
                             <div class="palace-body">
                                 <h3 class="place-heading">New York</h3>
-                                <p class="place-time">Fri 27 Nov 2016</p>
+                                <p class="place-time">Fri 27 Nov 2021</p>
                                 <p class="place-desc">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
                                 <button class="btn has-br-10 text-center js-buyticket">Buy tickets</button>
                             </div>
@@ -125,7 +124,7 @@
                             <img src="./assets/img/sliders/paris.jpg" alt="hình ảnh" class="place-img">
                             <div class="palace-body">
                                 <h3 class="place-heading">Paris</h3>
-                                <p class="place-time">Sat 28 Nov 2016</p>
+                                <p class="place-time">Sat 28 Nov 2021</p>
                                 <p class="place-desc">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
                                 <button class="btn has-br-10 text-center js-buyticket">Buy tickets</button>
                             </div>
@@ -134,7 +133,7 @@
                             <img src="./assets/img/sliders/sanfran.jpg" alt="hình ảnh" class="place-img">
                             <div class="palace-body">
                                 <h3 class="place-heading">San Francisco</h3>
-                                <p class="place-time">Sun 29 Nov 2016</p>
+                                <p class="place-time">Sun 29 Nov 2021</p>
                                 <p class="place-desc">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
                                 <button class="btn has-br-10 text-center js-buyticket">Buy tickets</button>
                             </div>
@@ -237,13 +236,28 @@
         var headerMenu = document.getElementById('menu-btn');
         var header = document.getElementById('header');
         var headerHeight = header.clientHeight;
-        
+        var nav = document.getElementById("nav");
+        var navListToggle = document.querySelectorAll("#nav li:nth-child(n+2)")
+        console.log(navListToggle);
         headerMenu.onclick = function(){
-            var isClose = header.clientHeight === headerHeight; 
+            var isClose = nav.clientHeight === headerHeight; 
+            var menuIcon = document.querySelector('.mobile-menu-icon')
             if (isClose){
-                header.style.height = 'auto';
+                for (var item of navListToggle){
+                    item.style.display = "block";
+                }
+                this.style.cssText = "transform: rotate(180deg)";
+                setTimeout(function(){
+                    menuIcon.className = menuIcon.className.replace('ti-menu', 'ti-close')
+                },150)
             } else {
-                header.style.height = null;
+                for (var item of navListToggle){
+                    item.style.display = "none";
+                }
+                this.style.cssText = "transform: rotate(0deg)";
+                setTimeout(function(){
+                    menuIcon.className = menuIcon.className.replace('ti-close', 'ti-menu')
+                },150)
             }
         }
 

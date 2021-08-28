@@ -28,13 +28,19 @@
     }
 
     #header{
-        overflow: hidden;
+        background-color: unset;
     }
 
     #header .search-button{
         display: none;
     }
-
+    #nav{
+        background-color: #00000091;
+    }
+    #nav li:not(:first-child){
+        display: none;
+        animation: dropDown 1s ease;
+    }
     #nav .subnav{
         position: initial;
         background-color: #333;
@@ -48,11 +54,26 @@
     #nav li,
     #header .mobile-menu-button {
         display: block;
+        transition: transform 0.5s;
+    }
+    
+    .mobile-menu-button:hover{
+        cursor: pointer;
     }
     #nav > li:first-child{
         display: inline-block;
     }
     
+    @keyframes dropDown {
+        from{
+            opacity: 0;
+            transform: translateY(-5px);
+        }
+        to{
+            opacity: 1;
+            transform: translateY(0px);
+        }
+    }
     #slider .slider-content{
         display: none;
     }
