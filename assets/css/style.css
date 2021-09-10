@@ -381,6 +381,9 @@ cursor: pointer;
     font-size: 15px;
     padding: 11px 8px;
 }
+.contact-form .form-message {
+    font-size: 15px;
+}
 .contact-info p a{
     color: darkcyan;
 }
@@ -488,9 +491,16 @@ cursor: pointer;
     align-items: center;
     font-size: 15px;
     cursor: pointer;
+    border: none;
 }
 .modal-btn i{
     margin-left: 8px;
+}
+.invalid .modal-input{
+    border: 1px solid red;
+}
+.invalid .form-message{
+    color: red;
 }
 .modal-btn:hover{
     background-color: rgb(194, 188, 188);

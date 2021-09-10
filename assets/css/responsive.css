@@ -7,6 +7,20 @@
     #footer .social-list a{
         padding: 0 8px;
     }
+    .row {
+        margin-left: 0;
+        margin-right: 0;
+    }
+    
+}
+@media (min-width: 740px) , (max-width: 1023px) {
+    #content .member-list {
+        padding: 0 12px;
+    }
+    #content .member-img {
+        width: 100%;
+        min-height: 200px;
+    }
 }
 
 /* responsive mobile */

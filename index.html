@@ -154,18 +154,21 @@
                         <p><i class="ti-email"></i>Email: <a href="mailto:bigbang@mail.com">bigbang@mail.com</a></p>
                     </div>
                     <div class="col col-haft s-col-full s-mt-32 contact-form">
-                        <form action="">
+                        <form action="" id="form-contact">
                             <div class="row">
-                                <div class="col col-haft s-col-full">
-                                    <input type="text" required placeholder="Name" class="form-control">
+                                <div class="col col-haft s-col-full form-group">
+                                    <input type="text" name='name' placeholder="Name" class="form-control">
+                                    <span class="form-message"></span>
                                 </div>
-                                <div class="col col-haft s-col-full s-mt-8">
-                                    <input type="email" required placeholder="Email" class="form-control">
+                                <div class="col col-haft s-col-full s-mt-8 form-group">
+                                    <input type="email" name='email' rules="email" placeholder="Email" class="form-control">
+                                    <span class="form-message"></span>
                                 </div>
                             </div>
                             <div class="row mt-8">
-                                <div class="col col-full">
-                                    <input type="text" required placeholder="Message" class="form-control">
+                                <div class="col col-full form-group">
+                                    <input type="text" name='massage' placeholder="Message" class="form-control">
+                                    <span class="form-message"></span>
                                 </div>
                             </div>
                             <input type="submit" class="btn has-br-10 pull-right mt-16" value="SEND">
@@ -196,27 +199,34 @@
 
     <!-- Modal -->
     <div class="modal">
-        <div class="modal-container">
+        <form class="modal-container" id="form-buy-ticket">
             <div class="modal-close">X</div>
             <div class="modal-header">
                 <i class="ti-bag"></i> Tickets
             </div>
             <div class="modal-body">
-                <label for="modal-quantity" class="modal-lable">
-                    <i class="ti-shopping-cart"></i> Tickets, 15$ per person
-                </label>
-                <input id="modal-quantity" type="text" class="modal-input" placeholder="How many?">
-                <label for="modal-email" class="modal-lable">
-                    <i class="ti-user"></i> Send to
-                </label>
-                <input id="modal-email" type="text" class="modal-input" placeholder="How many?">
-                <div class="modal-btn">Pay <i class="ti-check"></i></div>
+                <div class='form-group'>
+                    <label for="modal-quantity" class="modal-lable">
+                        <i class="ti-shopping-cart"></i> Tickets, 15$ per person
+                    </label>
+                    <input id="modal-quantity" rules="required|number" name='quantity' type="text" class="modal-input" placeholder="How many?">
+                    <span class="form-message"></span>
+                </div>
+                <div class="form-group">
+                    <label for="modal-email" class="modal-lable">
+                        <i class="ti-user"></i> Send to
+                    </label>
+                    <input id="modal-email" rules="required|email" name='email' type="email" class="modal-input" placeholder="Your email?">
+                    <span class="form-message"></span>
+                </div>
+                <button type="submit" class="modal-btn">Pay <i class="ti-check"></i></button>
             </div>
             <div class="modal-footer">
                 Need <a href="">help?</a>
             </div>
-        </div>
+        </form>
     </div>
+    <script src="./assets/js/validator2.js"></script>
     <script>
         var slideItem = document.getElementsByClassName('slider-item');
         var slideIndex;
@@ -238,7 +248,6 @@
         var headerHeight = header.clientHeight;
         var nav = document.getElementById("nav");
         var navListToggle = document.querySelectorAll("#nav li:nth-child(n+2)")
-        console.log(navListToggle);
         headerMenu.onclick = function(){
             var isClose = nav.clientHeight === headerHeight; 
             var menuIcon = document.querySelector('.mobile-menu-icon')
@@ -297,7 +306,23 @@
 
         modalContainer.addEventListener('click', function(event){
             event.stopPropagation();
-        })
+        });
+
+
+        // validate form pay
+        var form = new validator('#form-buy-ticket')
+        form.onSubmit = function(data){
+            console.log(data);
+            var quantityValue = data.quantity;
+            alert(`Bạn đặt ${quantityValue} vé, chúng tôi sẽ gửi thông tin cho bạn qua email.`)
+        }
+
+        // validate form contact
+        var formContact = new validator('#form-contact')
+        formContact.onSubmit = function(data){
+            console.log(data);
+            alert('Chúng tôi đã nhận thông tin và sẽ phản hồi qua email!')
+        }
     </script>
 </body>
 </html>
