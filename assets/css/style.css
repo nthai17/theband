@@ -273,9 +273,9 @@ cursor: pointer;
 }
 
 #content .member-img{
-    width: 154px;
+    width: 174px;
     border-radius: 10px;
-    min-height: 230px;
+    min-height: 258px;
     box-shadow: 4px 0px 14px #00000075;
 }
 #content .member-img:hover{

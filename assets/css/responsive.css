@@ -13,13 +13,13 @@
     }
     
 }
-@media (min-width: 740px) , (max-width: 1023px) {
+@media (min-width: 740px) and (max-width: 1023px) {
     #content .member-list {
         padding: 0 12px;
     }
     #content .member-img {
         width: 100%;
-        min-height: 200px;
+        min-height: 260px;
     }
 }
 
